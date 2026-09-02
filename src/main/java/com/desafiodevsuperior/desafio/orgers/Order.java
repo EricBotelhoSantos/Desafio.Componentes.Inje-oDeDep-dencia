@@ -1,8 +1,6 @@
 package com.desafiodevsuperior.desafio.orgers;
 
-import org.springframework.stereotype.Service;
 
-@Service
 public class Order {
     
     private int code;
@@ -10,8 +8,8 @@ public class Order {
     private double discount;
 
     public Order(int code, double basic, double discount) {
-        this.basic = basic;
         this.code = code;
+        this.basic = basic;        
         this.discount = discount;
     }
 
@@ -32,11 +30,11 @@ public class Order {
     }
 
     public double getDiscount() {
-        return discount;
+        return discount / 100;
     }
 
     public void setDiscount(double discount) {
-        this.discount = (discount / 100);
+        this.discount = discount;
         
     }
 

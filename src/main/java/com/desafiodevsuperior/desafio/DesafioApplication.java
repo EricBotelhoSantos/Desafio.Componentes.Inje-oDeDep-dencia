@@ -3,12 +3,19 @@ package com.desafiodevsuperior.desafio;
 import java.util.Locale;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.desafiodevsuperior.desafio.orgers.Order;
+import com.desafiodevsuperior.desafio.services.OrderService;
+
 @SpringBootApplication
 public class DesafioApplication implements CommandLineRunner {
+
+    @Autowired
+    private OrderService orderService;
     
 
 	public static void main(String[] args) {
@@ -22,6 +29,14 @@ public class DesafioApplication implements CommandLineRunner {
         
         System.out.print("Digite o código do pedido: ");
         int code = sc.nextInt();
+        System.out.print("Digite valor básico: ");
+        double basic = sc.nextDouble();
+        System.out.print("Digite o valor do Disconto: ");
+        double discount = sc.nextDouble();
+
+        Order order = new Order(code, basic, discount);
+        System.out.println("Pedido código: " + order.getCode());
+        System.out.println("Valor total: " + orderService.total(order));
     }
 
 }

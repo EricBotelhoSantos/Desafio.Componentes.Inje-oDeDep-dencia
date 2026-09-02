@@ -21,7 +21,7 @@ O sistema calcula o valor total de um pedido com base em seu valor básico, subt
 | Valor Básico do Pedido (sem desconto) | Valor do Frete |
 | :--- | :--- |
 | Abaixo de R$ 100,00 | R$ 20,00 |
-| De R$ 100,00 até R$ 199,99 | R$ 12,00 |
+| De R$ 100,00 até R$ 200,00 | R$ 12,00 |
 | R$ 200,00 ou mais | **Grátis** |
 
 ## 🏗️ Estrutura e Componentes

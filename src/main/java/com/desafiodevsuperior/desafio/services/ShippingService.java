@@ -1,0 +1,25 @@
+package com.desafiodevsuperior.desafio.services;
+
+import org.springframework.stereotype.Service;
+
+import com.desafiodevsuperior.desafio.orgers.Order;
+
+@Service
+public class ShippingService {
+    
+    public double shipment(Order order) {
+        
+        if (order.getBasic() < 100.00) {
+            return order.getBasic() - 20.00;
+
+        } else if (order.getBasic() <= 200.00) {
+            return order.getBasic() - 12.00;
+
+        } else {
+            return order.getBasic() - 0;
+        }  
+        
+        
+        
+    }
+}

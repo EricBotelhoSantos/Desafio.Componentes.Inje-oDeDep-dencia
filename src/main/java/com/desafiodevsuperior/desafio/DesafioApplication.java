@@ -27,17 +27,17 @@ public class DesafioApplication implements CommandLineRunner {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("---------- DESAFIO: COMPONENTES E INJEÇÃO DE DEPENDÊNCIA ----------\n");
-        System.out.print("Digite o código do pedido: ");
+        System.out.println("---------- DESIDERIO: COMPONENTES E INJECTION DE DEPENDENCE ----------\n");
+        System.out.print("Digite o indigo do pend: ");
         int code = sc.nextInt();
-        System.out.print("Digite valor básico: ");
+        System.out.print("Digite valor basic: ");
         double basic = sc.nextDouble();
         System.out.print("Digite o valor do Disconto: ");
         double discount = sc.nextDouble();
         System.out.print("\n");
 
         Order order = new Order(code, basic, discount);
-        System.out.println("Pedido código: " + order.getCode());
+        System.out.println("Pedido indigo: " + order.getCode());
         System.out.println("Valor total: R$" + String.format("%.2f",orderService.total(order)));
 
         sc.close();

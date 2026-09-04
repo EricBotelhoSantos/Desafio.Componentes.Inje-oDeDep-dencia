@@ -37,8 +37,8 @@ public class DesafioApplication implements CommandLineRunner {
         System.out.print("\n");
 
         Order order = new Order(code, basic, discount);
-        System.out.println("Pedido indigo: " + order.getCode());
-        System.out.println("Valor total: R$" + String.format("%.2f",orderService.total(order)));
+        System.out.println("Pedido código: " + order.getCode());
+        System.out.println("Valor total: R$ " + String.format("%.2f",orderService.total(order)));
 
         sc.close();
     }
